@@ -110,6 +110,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Blog Modal Functionality
+    const blogCards = document.querySelectorAll('.blog-card');
+    const blogModal = document.getElementById('blog-modal');
+    const closeBlogModal = blogModal.querySelector('.close-modal');
+    const blogModalContent = document.getElementById('blog-modal-content');
+
+    blogCards.forEach(card => {
+        const readMoreBtn = card.querySelector('.read-more');
+        readMoreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const postId = card.getAttribute('data-post-id');
+            const postContent = document.getElementById(`${postId}-content`);
+
+            if (postContent) {
+                blogModalContent.innerHTML = ''; // Clear previous content
+                const clonedContent = postContent.cloneNode(true);
+                clonedContent.style.display = 'block'; // Make the cloned content visible
+                blogModalContent.appendChild(clonedContent);
+                blogModal.classList.add('active');
+            }
+        });
+    });
+
+    const hideBlogModal = () => {
+        blogModal.classList.remove('active');
+        blogModalContent.innerHTML = ''; // Clear content when closing
+    };
+
+    closeBlogModal.addEventListener('click', hideBlogModal);
+    blogModal.addEventListener('click', (e) => {
+        if (e.target === blogModal) {
+            hideBlogModal();
+        }
+    });
+
     // Skills Scroller
     const scrollers = document.querySelectorAll(".scroller");
 

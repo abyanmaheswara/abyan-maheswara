@@ -22,6 +22,7 @@
           <li><a href="#projects">Project</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#blog">Blog</a></li>
         </ul>
         <div class="hamburger">
           <div class="line"></div>
@@ -163,6 +164,22 @@
         </div>
       </section>
 
+      <section id="blog" data-aos="fade-up">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+          <!-- Blog Post Card -->
+          <div class="blog-card" data-aos="fade-right" data-post-id="post1">
+            <img src="Pakan kucing otomatis.jpg" alt="Blog Post Image" />
+            <div class="blog-card-content">
+              <h3 class="blog-title">Membuat Pakan Kucing Otomatis dengan IoT</h3>
+              <p class="blog-excerpt">Sebuah cerita singkat tentang bagaimana saya merancang dan membangun dispenser pakan kucing otomatis menggunakan ESP8266 dan Blynk...</p>
+              <a href="#" class="read-more">Baca Selengkapnya</a>
+            </div>
+          </div>
+          <!-- Tambahkan lebih banyak blog post card di sini -->
+        </div>
+      </section>
+
       <section id="contact" data-aos="fade-up">
         <h2>Contact</h2>
         <form action="https://formspree.io/f/xdkwkqzk" method="POST">
@@ -195,6 +212,47 @@
         <img id="modal-img" src="" alt="Project Image" />
         <h3 id="modal-title"></h3>
         <p id="modal-description"></p>
+      </div>
+    </div>
+
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="blog-modal-content"></div>
+      </div>
+    </div>
+
+    <!-- Blog Post Content -->
+    <div id="post1-content" style="display: none;">
+      <h1 class="post-title">Membuat Pakan Kucing Otomatis dengan IoT</h1>
+      <img src="Pakan kucing otomatis.jpg" alt="Pakan Kucing Otomatis" class="post-image" />
+      <div class="post-body">
+        <p>
+          Selamat datang di postingan blog pertama saya! Di sini saya akan berbagi cerita tentang salah satu proyek favorit saya, yaitu membuat dispenser pakan kucing otomatis berbasis Internet of Things (IoT).
+        </p>
+        <h2>Latar Belakang Proyek</h2>
+        <p>
+          Sebagai pencinta kucing dan teknologi, saya sering berpikir bagaimana cara memastikan kucing saya mendapatkan makanan tepat waktu, bahkan ketika saya sedang tidak di rumah. Dari situlah ide ini muncul: sebuah alat yang bisa memberi makan kucing secara terjadwal dan bisa dipantau dari jarak jauh.
+        </p>
+        <h2>Teknologi yang Digunakan</h2>
+        <ul>
+          <li><b>ESP8266:</b> Mikrokontroler dengan modul WiFi yang menjadi otak dari sistem ini.</li>
+          <li><b>Aplikasi Blynk:</b> Platform IoT yang saya gunakan untuk membuat antarmuka kontrol di smartphone. Dengan Blynk, saya bisa mengatur jadwal pemberian pakan.</li>
+          <li><b>Motor Servo:</b> Digunakan untuk membuka dan menutup katup dispenser pakan.</li>
+          <li><b>Sensor Jarak (Opsional):</b> Bisa ditambahkan untuk mendeteksi level pakan di dalam kontainer.</li>
+        </ul>
+        <h2>Proses Pembuatan</h2>
+        <p>
+          Prosesnya dimulai dari merancang wadah pakan, kemudian merakit sirkuit elektronika yang menghubungkan ESP8266 dengan motor servo. Setelah itu, saya menulis kode program untuk mikrokontroler menggunakan Arduino IDE. Bagian paling seru adalah ketika mengintegrasikan perangkat keras dengan aplikasi Blynk, di mana saya bisa membuat tombol virtual dan penjadwal waktu.
+        </p>
+        <h2>Hasil Akhir</h2>
+        <p>
+          Hasilnya adalah sebuah prototipe yang berfungsi dengan baik. Dispenser ini bisa diandalkan untuk memberi makan kucing saya sesuai jadwal yang telah ditentukan melalui aplikasi. Proyek ini tidak hanya menyelesaikan masalah praktis, tetapi juga menjadi pengalaman belajar yang luar biasa di dunia IoT.
+        </p>
+        <p>
+          Terima kasih sudah membaca! Nantikan proyek-proyek dan cerita lainnya di blog ini.
+        </p>
       </div>
     </div>
 
