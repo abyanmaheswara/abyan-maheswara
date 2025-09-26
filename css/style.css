@@ -707,10 +707,10 @@ footer {
 /* AI Chatbot */
 #chatbot-icon {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 50px;
+    height: 50px;
     background-color: var(--primary-color);
     border-radius: 50%;
     display: flex;
@@ -727,15 +727,15 @@ footer {
 }
 
 #chatbot-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     color: #fff;
 }
 
 #chatbot-window {
     position: fixed;
-    bottom: 7rem;
-    right: 2rem;
+    bottom: 6rem;
+    right: 1.5rem;
     width: 350px;
     max-width: 90%;
     height: 500px;
