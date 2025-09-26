@@ -584,13 +584,18 @@ footer {
 }
 
 .social-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1.2rem;
-    transition: color 0.3s;
+    margin: 0 0.75rem;
+    display: inline-block;
 }
 
-.social-links a:hover {
-    color: var(--primary-color);
+.social-links img {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(1) brightness(1.5);
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0) brightness(1);
 }
