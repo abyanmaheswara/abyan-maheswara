@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Abyan</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <header>
+        <nav>
+            <div class="logo">Abyan</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#family">Keluarga</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1 class="hero-title">Selamat Datang di Portofolio Saya</h1>
+            <p class="hero-subtitle">Saya seorang penggemar IoT dan teknologi rekayasa.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" data-aos="fade-up">
+            <h2>Tentang Saya</h2>
+            <div class="about-content">
+                <img src="abyan.jpg" alt="Foto Abyan" class="profile-pic" data-aos="fade-right">
+                <div class="about-text" data-aos="fade-left">
+                    <p>Halo! Saya Abyan, seorang mahasiswa yang bersemangat dalam dunia teknologi dan rekayasa. Saat ini saya sedang menempuh pendidikan di Politeknik Manufaktur Bandung. Saya memiliki minat besar dalam pengembangan perangkat lunak, robotika, dan otomasi industri. Saya selalu antusias untuk belajar hal-hal baru dan menerapkan pengetahuan saya dalam proyek-proyek yang menantang dan bermanfaat.</p>
+                    <div class="about-interests">
+                        <span>IoT</span>
+                        <span>Robotika</span>
+                        <span>Otomasi</span>
+                        <span>Web Dev</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="family" data-aos="fade-up">
+            <h2>Histori Keluarga</h2>
+            <p>Saya berasal dari keluarga yang selalu mendukung penuh semangat saya dalam mengejar ilmu dan teknologi. Dukungan mereka adalah fondasi utama bagi setiap pencapaian yang berhasil saya raih.</p>
+            <div class="gallery-grid">
+                 <img src="Keluarga.jpg" alt="Foto Keluarga" data-aos="zoom-in">
+            </div>
+        </section>
+
+        <section id="education" data-aos="fade-up">
+            <h2>Pendidikan</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 - Sekarang</div>
+                    <div class="timeline-content">
+                        <h3>Politeknik Manufaktur Bandung</h3>
+                        <p>Saat ini saya sedang menempuh pendidikan di jurusan Teknik Otomasi Manufaktur dan Mekatronika.</p>
+                        <p>Program studi D4 Teknologi Rekayasa Informatika Industri.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>SMAN 1 Lembang</h3>
+                        <p>Saya merupakan alumni SMAN 1 Lembang, mengikuti Kurikulum Merdeka dari kelas 10 hingga 12 tanpa penjurusan spesifik.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" data-aos="fade-up">
+            <h2>Pengalaman</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Pengalaman</div>
+                    <div class="timeline-content">
+                        <h3>Organisasi & Kompetisi</h3>
+                        <p>Aktif terlibat dalam tim robotika sekolah dan mengikuti beberapa kompetisi tingkat regional. Pengalaman ini mengajarkan saya pentingnya kerja sama tim, pemecahan masalah, dan manajemen waktu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" data-aos="fade-up">
+            <h2>Keahlian</h2>
+            <div class="scroller">
+                <ul class="scroller__inner">
+                    <li><img src="https://cdn.simpleicons.org/html5/white" alt="HTML5"></li>
+                    <li><img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS3"></li>
+                    <li><img src="https://cdn.simpleicons.org/javascript/white" alt="JavaScript"></li>
+                    <li><img src="https://cdn.simpleicons.org/arduino/white" alt="Arduino"></li>
+                    <li><img src="https://cdn.simpleicons.org/cplusplus/white" alt="C++"></li>
+                    <li><img src="https://cdn.simpleicons.org/espressif/white" alt="ESP"></li>
+                    <li><img src="https://cdn.simpleicons.org/raspberrypi/white" alt="Raspberry Pi"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" data-aos="fade-up">
+            <h2>Project</h2>
+            <div class="project-grid">
+                <div class="project-card" data-aos="fade-right" 
+                     data-image="Robot Line Follower.jpg" 
+                     data-title="Robot Line Follower" 
+                     data-description="Proyek ini melibatkan perancangan dan pembuatan robot dari awal yang mampu menavigasi jalur hitam di permukaan putih. Saya menggunakan sensor inframerah untuk deteksi garis, mikrokontroler Arduino sebagai otak robot, dan driver motor untuk mengontrol pergerakan. Ini adalah pengantar yang bagus untuk sistem kontrol loop tertutup dan pemrograman perangkat keras.">
+                    <img src="Robot Line Follower.jpg" alt="Robot Line Follower">
+                    <h3>Robot Line Follower</h3>
+                    <p>Merancang dan membangun robot yang dapat mengikuti garis secara otomatis.</p>
+                </div>
+                <div class="project-card" data-aos="fade-left" 
+                     data-image="Pakan kucing otomatis.jpg" 
+                     data-title="Pakan Kucing Otomatis (IoT)" 
+                     data-description="Untuk proyek ini, saya mengembangkan dispenser pakan kucing otomatis menggunakan ESP8266. Sistem ini terhubung ke jaringan WiFi dan memungkinkan penjadwalan waktu makan melalui aplikasi Blynk. Proyek ini mengasah keterampilan saya dalam bidang Internet of Things (IoT), pemrograman mikrokontroler, dan pengembangan aplikasi mobile dasar.">
+                    <img src="Pakan kucing otomatis.jpg" alt="Pakan Kucing Otomatis">
+                    <h3>Pakan Kucing Otomatis</h3>
+                    <p>Membuat sistem pemberi pakan kucing otomatis berbasis IoT yang dapat diatur jadwalnya menggunakan Blynk.</p>
+                </div>
+                <div class="project-card" data-aos="fade-right"
+                     data-image="tempat-sampah-otomatis.jpg"
+                     data-title="Tempat Sampah Otomatis"
+                     data-description="Proyek ini adalah tempat sampah otomatis yang dapat membuka dan menutup sendiri menggunakan sensor. Proyek ini dibuat untuk menjaga kebersihan dan mengurangi sentuhan langsung dengan tempat sampah.">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7J4Y2n2YJ6sJ3J3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-3X-tbn:ANd9GcQ7J4Y2n2YJ6sJ3J3X-3X-3X-3X-3X-3X-3X-3.jpg" alt="Tempat Sampah Otomatis">
+                    <h3>Tempat Sampah Otomatis</h3>
+                    <p>Membuat tempat sampah yang dapat membuka dan menutup secara otomatis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" data-aos="fade-up">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="F6.jpg" alt="Gallery Image 1" data-aos="zoom-in">
+                <img src="Rewel Cipok.jpg" alt="Gallery Image 2" data-aos="zoom-in" data-aos-delay="100">
+                <img src="abyan.jpg" alt="Gallery Image 3" data-aos="zoom-in" data-aos-delay="200">
+            </div>
+        </section>
+
+        <section id="contact" data-aos="fade-up">
+            <h2>Kontak Saya</h2>
+            <form>
+                <input type="text" name="name" placeholder="Nama Anda" required>
+                <input type="email" name="email" placeholder="Email Anda" required>
+                <textarea name="message" placeholder="Pesan Anda" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Abyan. Dibuat dengan penuh semangat.</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-img" src="" alt="Project Image">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
