@@ -588,14 +588,14 @@ footer {
     display: inline-block;
 }
 
-.social-links img {
+.social-links img, .social-links svg {
     height: 24px;
     width: 24px;
     transition: transform 0.3s, filter 0.3s;
     filter: grayscale(1) brightness(1.5);
 }
 
-.social-links a:hover img {
+.social-links a:hover img, .social-links a:hover svg {
     transform: scale(1.1);
     filter: grayscale(0) brightness(1);
 }
