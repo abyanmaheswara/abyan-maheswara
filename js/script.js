@@ -201,4 +201,76 @@ document.addEventListener('DOMContentLoaded', () => {
             status.remove();
         }, 5000);
     });
+
+    // AI Chatbot Functionality
+    const chatbotIcon = document.getElementById('chatbot-icon');
+    const chatbotWindow = document.getElementById('chatbot-window');
+    const closeChatbot = document.getElementById('close-chatbot');
+    const chatbotBody = document.getElementById('chatbot-body');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+
+    chatbotIcon.addEventListener('click', () => {
+        chatbotWindow.classList.toggle('active');
+    });
+
+    closeChatbot.addEventListener('click', () => {
+        chatbotWindow.classList.remove('active');
+    });
+
+    const chatbotResponses = {
+        "halo": "Halo! Ada yang bisa saya bantu?",
+        "siapa kamu": "Saya adalah asisten AI Abyan. Saya bisa menjawab pertanyaan tentang Abyan, proyeknya, dan keahliannya.",
+        "keahlian": "Abyan memiliki keahlian dalam HTML, CSS, JavaScript, Arduino, C++, ESP, dan Raspberry Pi. Dia sangat tertarik pada IoT, Robotika, dan Otomasi.",
+        "skill": "Abyan memiliki keahlian dalam HTML, CSS, JavaScript, Arduino, C++, ESP, dan Raspberry Pi. Dia sangat tertarik pada IoT, Robotika, dan Otomasi.",
+        "pendidikan": "Abyan saat ini menempuh pendidikan di Politeknik Manufaktur Bandung, jurusan Teknik Otomasi Manufaktur dan Mekatronika, program studi D4 Teknologi Rekayasa Informatika Industri.",
+        "kuliah": "Abyan saat ini menempuh pendidikan di Politeknik Manufaktur Bandung, jurusan Teknik Otomasi Manufaktur dan Mekatronika, program studi D4 Teknologi Rekayasa Informatika Industri.",
+        "proyek": "Abyan telah mengerjakan beberapa proyek menarik, seperti Robot Line Follower, Pakan Kucing Otomatis berbasis IoT, dan Tempat Sampah Otomatis. Anda bisa melihat detailnya di bagian Proyek.",
+        "project": "Abyan telah mengerjakan beberapa proyek menarik, seperti Robot Line Follower, Pakan Kucing Otomatis berbasis IoT, dan Tempat Sampah Otomatis. Anda bisa melihat detailnya di bagian Proyek.",
+        "kontak": "Anda bisa menghubungi Abyan melalui formulir kontak di bagian bawah halaman ini, atau melalui Instagram, LinkedIn, dan GitHub yang linknya ada di footer.",
+        "contact": "Anda bisa menghubungi Abyan melalui formulir kontak di bagian bawah halaman ini, atau melalui Instagram, LinkedIn, dan GitHub yang linknya ada di footer.",
+        "terima kasih": "Sama-sama! Senang bisa membantu.",
+        "default": "Maaf, saya belum mengerti pertanyaan itu. Coba tanyakan hal lain tentang Abyan."
+    };
+
+    const sendMessage = () => {
+        const userInput = chatbotInput.value.trim();
+        if (userInput === '') return;
+
+        // Display user message
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.className = 'chat-message user';
+        userMessageDiv.innerHTML = `<p>${userInput}</p>`;
+        chatbotBody.appendChild(userMessageDiv);
+
+        // Get bot response
+        let botResponse = chatbotResponses.default;
+        for (const key in chatbotResponses) {
+            if (userInput.toLowerCase().includes(key)) {
+                botResponse = chatbotResponses[key];
+                break;
+            }
+        }
+
+        // Display bot message
+        setTimeout(() => {
+            const botMessageDiv = document.createElement('div');
+            botMessageDiv.className = 'chat-message bot';
+            botMessageDiv.innerHTML = `<p>${botResponse}</p>`;
+            chatbotBody.appendChild(botMessageDiv);
+            // Scroll to the bottom
+            chatbotBody.scrollTop = chatbotBody.scrollHeight;
+        }, 500);
+
+        chatbotInput.value = '';
+        // Scroll to the bottom
+        chatbotBody.scrollTop = chatbotBody.scrollHeight;
+    };
+
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
 });
