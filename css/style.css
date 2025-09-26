@@ -582,6 +582,14 @@ footer {
     filter: grayscale(0) brightness(1);
 }
 
+.light-theme .scroller__inner img {
+    filter: invert(1) grayscale(1) brightness(0.5);
+}
+
+.light-theme .scroller__inner li:hover img {
+    filter: invert(1) grayscale(0) brightness(1);
+}
+
 /* Timeline Section */
 .timeline {
     position: relative;
