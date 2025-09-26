@@ -574,20 +574,12 @@ footer {
 
 .scroller__inner img {
     height: 40px;
-    filter: grayscale(1) brightness(1.5);
+    filter: grayscale(1) opacity(0.7);
     transition: filter 0.3s;
 }
 
 .scroller__inner li:hover img {
-    filter: grayscale(0) brightness(1);
-}
-
-.light-theme .scroller__inner img {
-    filter: invert(1) grayscale(1) brightness(0.5);
-}
-
-.light-theme .scroller__inner li:hover img {
-    filter: invert(1) grayscale(0) brightness(1);
+    filter: grayscale(0) opacity(1);
 }
 
 /* Timeline Section */
