@@ -202,11 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     });
 
-        setTimeout(() => {
-            status.remove();
-        }, 5000);
-    });
-
     // Theme Toggle Functionality
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;

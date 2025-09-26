@@ -11,6 +11,9 @@
     --modal-overlay-bg: rgba(0, 0, 0, 0.85);
     --close-modal-color: #fff;
     --chat-bot-bg: #333;
+    --button-text-color: #fff;
+    --interest-bg-color: rgba(0, 170, 255, 0.1);
+    --gallery-shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 body.light-theme {
@@ -26,6 +29,9 @@ body.light-theme {
     --modal-overlay-bg: rgba(0, 0, 0, 0.7);
     --close-modal-color: #333;
     --chat-bot-bg: #e9e9e9;
+    --button-text-color: #fff;
+    --interest-bg-color: rgba(0, 119, 204, 0.1);
+    --gallery-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 #theme-toggle {
@@ -180,7 +186,7 @@ section h2 {
 }
 
 .about-interests span {
-    background-color: rgba(0, 170, 255, 0.1);
+    background-color: var(--interest-bg-color);
     color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -250,7 +256,7 @@ section h2 {
 
 .gallery-grid img:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px var(--gallery-shadow-color);
 }
 
 /* Contact Section */
@@ -271,9 +277,7 @@ form input, form textarea {
 }
 
 form button {
-    padding: 1rem;
-    background: var(--primary-color);
-    color: #fff;
+    color: var(--button-text-color);
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -769,7 +773,7 @@ footer {
 #chatbot-icon svg {
     width: 25px;
     height: 25px;
-    color: #fff;
+    color: var(--button-text-color);
 }
 
 #chatbot-window {
@@ -801,7 +805,7 @@ footer {
 .chatbot-header {
     padding: 1rem;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--button-text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -841,7 +845,7 @@ footer {
 
 .chat-message.user {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--button-text-color);
     align-self: flex-end;
     border-bottom-right-radius: 0;
 }
@@ -866,7 +870,7 @@ footer {
 #chatbot-send {
     padding: 0.75rem 1rem;
     background: var(--primary-color);
-    color: #fff;
+    color: var(--button-text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
