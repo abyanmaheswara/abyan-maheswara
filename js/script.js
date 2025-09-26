@@ -133,4 +133,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Contact Form Submission
+    const form = document.querySelector('#contact form');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const status = document.createElement('p');
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                status.textContent = "Terima kasih! Pesan Anda telah terkirim.";
+                status.style.color = 'green';
+                form.reset();
+            } else {
+                status.textContent = "Oops! Terjadi masalah saat mengirim pesan Anda.";
+                status.style.color = 'red';
+            }
+        } catch (error) {
+            status.textContent = "Oops! Terjadi masalah saat mengirim pesan Anda.";
+            status.style.color = 'red';
+        }
+
+        form.appendChild(status);
+        setTimeout(() => {
+            status.remove();
+        }, 5000);
+    });
 });
