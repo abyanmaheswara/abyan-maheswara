@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll Animations for Sections
   gsap.utils.toArray("section").forEach((section) => {
+    // Skip #education to ensure it's always visible (user report fix)
+    if (section.id === "education") return;
+
     // Only animate direct children of the section or content containers
     const items = section.querySelectorAll("h2, .project-card, .blog-card, .timeline-item, .about-content, .scroller, form, .gallery-grid img");
     if (items.length > 0) {
