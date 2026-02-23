@@ -28,17 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll Animations for Sections
   gsap.utils.toArray("section").forEach((section) => {
-    gsap.from(section.querySelectorAll("h2, p, .project-card, .blog-card, .timeline-item"), {
-      scrollTrigger: {
-        trigger: section,
-        start: "top 80%",
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power3.out",
-    });
+    // Only animate direct children of the section or content containers
+    const items = section.querySelectorAll("h2, .project-card, .blog-card, .timeline-item, .about-content, .scroller, form, .gallery-grid img");
+    if (items.length > 0) {
+      gsap.from(items, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
+    }
   });
 
   // Custom Cursor Follower
