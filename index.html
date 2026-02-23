@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Abyan</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+    <header>
+      <nav class="glass" aria-label="Main navigation">
+        <div class="logo">Abyan</div>
+        <ul class="nav-links">
+          <li><a href="#about" aria-label="Go to About section">About</a></li>
+          <li><a href="#experience" aria-label="Go to Experience section">Pengalaman</a></li>
+          <li><a href="#projects" aria-label="Go to Projects section">Project</a></li>
+          <li><a href="#blog" aria-label="Go to Blog section">Blog</a></li>
+          <li>
+            <button id="theme-toggle" aria-label="Toggle dark/light theme">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.732 16 0 12.28 0 7.71 0 4.272 2.134 1.57 5.124.66A.757.757 0 0 1 6 .278z"
+                />
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger" aria-label="Open navigation menu">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <h1 class="hero-title">Selamat Datang di Portofolio Saya</h1>
+        <p class="hero-subtitle">Saya seorang penggemar IoT dan teknologi rekayasa.</p>
+      </div>
+    </header>
+
+    <main aria-label="Main content area">
+      <section id="about" data-aos="fade-up" aria-labelledby="about-heading">
+        <h2 id="about-heading">Tentang Saya</h2>
+        <div class="about-content">
+          <img src="abyan.jpg" alt="Foto Abyan" class="profile-pic" data-aos="fade-right" />
+          <div class="about-text" data-aos="fade-left">
+            <p>
+              Halo! Saya Abyan, mahasiswa <b>Teknologi Rekayasa Informatika Industri</b> di <b>Politeknik Manufaktur Bandung</b>. Saya memiliki minat besar di bidang <b>Internet of Things (IoT)</b>. Saya senang mengeksplorasi bagaimana
+              teknologi sensor dan data dapat diintegrasikan untuk menciptakan solusi cerdas yang mempermudah berbagai aspek kehidupan. Saat ini saya terus belajar untuk mengasah kemampuan teknis saya di ekosistem digital.
+            </p>
+            <div class="about-interests">
+              <span>IoT</span>
+              <span>Leadership</span>
+              <span>Community</span>
+              <span>Robotika</span>
+              <span>Web Dev</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="family" data-aos="fade-up" aria-labelledby="family-heading">
+        <h2 id="family-heading">Histori Keluarga</h2>
+        <p>Saya berasal dari keluarga yang selalu mendukung penuh semangat saya dalam mengejar ilmu dan teknologi. Dukungan mereka adalah fondasi utama bagi setiap pencapaian yang berhasil saya raih.</p>
+        <div class="gallery-grid">
+          <img src="Keluarga.jpg" alt="Foto Keluarga" data-aos="zoom-in" />
+        </div>
+      </section>
+
+      <section id="education" data-aos="fade-up" aria-labelledby="education-heading">
+        <h2 id="education-heading">Pendidikan</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 - Sekarang</div>
+            <div class="timeline-content">
+              <h3>Politeknik Manufaktur Bandung</h3>
+              <p>Saat ini saya sedang menempuh pendidikan di jurusan Teknik Otomasi Manufaktur dan Mekatronika.</p>
+              <p>Program studi D4 Teknologi Rekayasa Informatika Industri.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 - 2024</div>
+            <div class="timeline-content">
+              <h3>SMAN 1 Lembang</h3>
+              <p>Saya merupakan alumni SMAN 1 Lembang, mengikuti Kurikulum Merdeka dari kelas 10 hingga 12 tanpa penjurusan spesifik.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" data-aos="fade-up" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Kepemimpinan & Pengalaman</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 - Sekarang</div>
+            <div class="timeline-content">
+              <h3>Community & Leadership</h3>
+              <p>Aktif dalam menggerakkan diskusi teknologi di kampus Politeknik Manufaktur Bandung. Berfokus pada kolaborasi antar mahasiswa untuk memecahkan masalah industri lewat solusi digital.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 - 2024</div>
+            <div class="timeline-content">
+              <h3>Robotika & Organisasi Sekolah</h3>
+              <p>Pernah memimpin inisiatif teknis dalam tim robotika sekolah, mengelola pengembangan proyek kompetisi tingkat regional, dan mementori anggota tim baru dalam dasar-dasar elektronika.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" data-aos="fade-up" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Keahlian</h2>
+        <div class="scroller">
+          <ul class="scroller__inner">
+            <li><img src="https://cdn.simpleicons.org/html5" alt="HTML5" /></li>
+            <li><img src="https://cdn.simpleicons.org/css3" alt="CSS3" /></li>
+            <li><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" /></li>
+            <li><img src="https://cdn.simpleicons.org/arduino" alt="Arduino" /></li>
+            <li><img src="https://cdn.simpleicons.org/cplusplus" alt="C++" /></li>
+            <li><img src="https://cdn.simpleicons.org/espressif" alt="ESP" /></li>
+            <li><img src="https://cdn.simpleicons.org/raspberrypi" alt="Raspberry Pi" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" data-aos="fade-up" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Project Unggulan</h2>
+        <div class="project-grid">
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-image="https://via.placeholder.com/600x400/8B4513/FFFFFF?text=FactoryForge+Dashboard"
+            data-title="FactoryForge: Industrial IoT Monitoring"
+            data-description="FactoryForge adalah platform monitoring IoT industri real-time yang dibangun menggunakan React, Node.js, dan Socket.io. Proyek ini memvisualisasikan data sensor secara live, mendukung manajemen alert otomatis, dan analisis performa mesin. Project ini menunjukkan kemampuan saya dalam membangun sistem full-stack yang scalable dan memiliki dampak nyata pada efisiensi industri."
+          >
+            <div class="project-logo-container">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background Circle -->
+                <circle cx="50" cy="50" r="48" fill="url(#metalBrown)" />
+                <!-- Factory Icon -->
+                <path d="M25 65 L25 45 L35 45 L35 40 L45 40 L45 35 L55 35 L55 40 L65 40 L65 45 L75 45 L75 65 Z" fill="#4A2C2A" opacity="0.8" />
+                <!-- Gear -->
+                <circle cx="50" cy="75" r="8" fill="#FF6B35" />
+                <circle cx="50" cy="75" r="4" fill="#8B4513" />
+                <!-- Gradient -->
+                <defs>
+                  <linearGradient id="metalBrown" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color: #8b4513; stop-opacity: 1" />
+                    <stop offset="50%" style="stop-color: #a0522d; stop-opacity: 1" />
+                    <stop offset="100%" style="stop-color: #6b3410; stop-opacity: 1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h3>FactoryForge (Flagship)</h3>
+            <p>Smart Industrial IoT Platform dengan Dashboard real-time dan analisis cerdas.</p>
+          </div>
+          <div
+            class="project-card"
+            data-aos="fade-right"
+            data-image="Robot Line Follower.jpg"
+            data-title="Robot Line Follower"
+            data-description="Proyek ini merupakan tugas akhir untuk mata kuliah Elektronika di semester 2. Pengembangan robot ini mencakup seluruh proses dari awal hingga akhir, mulai dari perancangan skematik dan desain PCB (Printed Circuit Board), proses etching, perakitan komponen elektronika, hingga pemrograman mikrokontroler. Robot ini menggunakan sensor inframerah untuk mendeteksi garis hitam dan driver motor untuk menggerakkan roda, menjadikannya sebuah studi kasus yang sangat baik dalam implementasi sistem kontrol loop tertutup dan pemrograman perangkat keras."
+          >
+            <img src="Robot Line Follower.jpg" alt="Robot Line Follower" />
+            <h3>Robot Line Follower</h3>
+            <p>Merancang dan membangun robot yang dapat mengikuti garis secara otomatis.</p>
+          </div>
+          <div
+            class="project-card"
+            data-aos="fade-left"
+            data-image="Pakan kucing otomatis.jpg"
+            data-title="Pakan Kucing Otomatis (IoT)"
+            data-description="Untuk proyek ini, saya mengembangkan dispenser pakan kucing otomatis menggunakan ESP8266. Sistem ini terhubung ke jaringan WiFi dan memungkinkan penjadwalan waktu makan melalui aplikasi Blynk. Proyek ini mengasah keterampilan saya dalam bidang Internet of Things (IoT), pemrograman mikrokontroler, dan pengembangan aplikasi mobile dasar."
+          >
+            <img src="Pakan kucing otomatis.jpg" alt="Pakan Kucing Otomatis" />
+            <h3>Pakan Kucing Otomatis</h3>
+            <p>Membuat sistem pemberi pakan kucing otomatis berbasis IoT yang dapat diatur jadwalnya menggunakan Blynk.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" data-aos="fade-up" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">Gallery</h2>
+        <div class="gallery-grid">
+          <img src="F6.jpg" alt="Gallery Image 1" data-aos="zoom-in" />
+          <img src="Rewel Cipok.jpg" alt="Gallery Image 2" data-aos="zoom-in" data-aos-delay="100" />
+          <img src="abyan.jpg" alt="Gallery Image 3" data-aos="zoom-in" data-aos-delay="200" />
+        </div>
+      </section>
+
+      <section id="blog" data-aos="fade-up" aria-labelledby="blog-heading">
+        <h2 id="blog-heading">Blog</h2>
+        <div class="blog-grid">
+          <!-- Blog Post Card -->
+          <div class="blog-card" data-aos="fade-right" data-post-id="post1">
+            <img src="Pakan kucing otomatis.jpg" alt="Blog Post Image" />
+            <div class="blog-card-content">
+              <h3 class="blog-title">Membuat Pakan Kucing Otomatis dengan IoT</h3>
+              <p class="blog-excerpt">Sebuah cerita singkat tentang bagaimana saya merancang dan membangun dispenser pakan kucing otomatis menggunakan ESP8266 dan Blynk...</p>
+              <a href="#" class="read-more" aria-label="Read more about Membuat Pakan Kucing Otomatis dengan IoT">Baca Selengkapnya</a>
+            </div>
+          </div>
+          <!-- Tambahkan lebih banyak blog post card di sini -->
+        </div>
+      </section>
+
+      <section id="contact" data-aos="fade-up" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <form action="https://formspree.io/f/xdkwkqzk" method="POST" aria-label="Contact form">
+          <input type="text" name="name" placeholder="Nama Anda" required aria-label="Your Name" />
+          <input type="email" name="email" placeholder="Email Anda" required aria-label="Your Email" />
+          <textarea name="message" placeholder="Pesan Anda" required aria-label="Your Message"></textarea>
+          <button type="submit" aria-label="Send Message">Kirim</button>
+        </form>
+      </section>
+    </main>
+
+    <footer aria-label="Social media links and copyright information">
+      <div class="social-links">
+        <a href="https://www.instagram.com/abyanmhes?igsh=Zjhwcjc5aW10MjVn" target="_blank" aria-label="Visit Abyan's Instagram profile"><img src="https://cdn.simpleicons.org/instagram/white" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/abyan-maheswara-460b6b318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Visit Abyan's LinkedIn profile"
+          ><svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+            /></svg
+        ></a>
+        <a href="https://github.com/abyanmaheswara" target="_blank" aria-label="Visit Abyan's GitHub profile"><img src="https://cdn.simpleicons.org/github/white" alt="GitHub" /></a>
+      </div>
+      <p>&copy; 2025 Abyan. Dibuat dengan penuh semangat.</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-content glass">
+        <span class="close-modal" aria-label="Close project details modal">&times;</span>
+        <img id="modal-img" src="" alt="Project Image" />
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="blog-modal-title">
+      <div class="modal-content">
+        <span class="close-modal" aria-label="Close blog post modal">&times;</span>
+        <div id="blog-modal-content"></div>
+      </div>
+    </div>
+
+    <!-- Blog Post Content -->
+    <div id="post1-content" style="display: none">
+      <h1 class="post-title" id="blog-modal-title">Membuat Pakan Kucing Otomatis dengan IoT</h1>
+      <img src="Pakan kucing otomatis.jpg" alt="Pakan Kucing Otomatis" class="post-image" />
+      <div class="post-body">
+        <p>Selamat datang di postingan blog pertama saya! Di sini saya akan berbagi cerita tentang salah satu proyek favorit saya, yaitu membuat dispenser pakan kucing otomatis berbasis Internet of Things (IoT).</p>
+        <h2>Latar Belakang Proyek</h2>
+        <p>
+          Sebagai pencinta kucing dan teknologi, saya sering berpikir bagaimana cara memastikan kucing saya mendapatkan makanan tepat waktu, bahkan ketika saya sedang tidak di rumah. Dari situlah ide ini muncul: sebuah alat yang bisa
+          memberi makan kucing secara terjadwal dan bisa dipantau dari jarak jauh.
+        </p>
+        <h2>Teknologi yang Digunakan</h2>
+        <ul>
+          <li><b>ESP8266:</b> Mikrokontroler dengan modul WiFi yang menjadi otak dari sistem ini.</li>
+          <li><b>Aplikasi Blynk:</b> Platform IoT yang saya gunakan untuk membuat antarmuka kontrol di smartphone. Dengan Blynk, saya bisa mengatur jadwal pemberian pakan.</li>
+          <li><b>Motor Servo:</b> Digunakan untuk membuka dan menutup katup dispenser pakan.</li>
+          <li><b>Sensor Jarak (Opsional):</b> Bisa ditambahkan untuk mendeteksi level pakan di dalam kontainer.</li>
+        </ul>
+        <h2>Proses Pembuatan</h2>
+        <p>
+          Prosesnya dimulai dari merancang wadah pakan, kemudian merakit sirkuit elektronika yang menghubungkan ESP8266 dengan motor servo. Setelah itu, saya menulis kode program untuk mikrokontroler menggunakan Arduino IDE. Bagian paling
+          seru adalah ketika mengintegrasikan perangkat keras dengan aplikasi Blynk, di mana saya bisa membuat tombol virtual dan penjadwal waktu.
+        </p>
+        <h2>Hasil Akhir</h2>
+        <p>
+          Hasilnya adalah sebuah prototipe yang berfungsi dengan baik. Dispenser ini bisa diandalkan untuk memberi makan kucing saya sesuai jadwal yang telah ditentukan melalui aplikasi. Proyek ini tidak hanya menyelesaikan masalah praktis,
+          tetapi juga menjadi pengalaman belajar yang luar biasa di dunia IoT.
+        </p>
+        <p>Terima kasih sudah membaca! Nantikan proyek-proyek dan cerita lainnya di blog ini.</p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- AI Chatbot -->
+    <div id="chatbot-icon" role="button" aria-label="Open AI Chatbot">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-robot" viewBox="0 0 16 16">
+        <path
+          d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"
+        />
+        <path
+          d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1.5a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 15 14.5V12a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 9v2h-1v-2h1Zm-3 0v2h-1v-2h1Zm-3 0v2h-1v-2h1Zm-3 0v2H4v-2h1Z"
+        />
+      </svg>
+    </div>
+    <div id="chatbot-window" class="glass" role="dialog" aria-modal="true" aria-labelledby="chatbot-header">
+      <div class="chatbot-header">
+        <h3 id="chatbot-header">Asisten AI</h3>
+        <span id="close-chatbot" aria-label="Close chatbot">&times;</span>
+      </div>
+      <div id="chatbot-body" role="log" aria-live="polite">
+        <div class="chat-message bot">
+          <p>Halo! Saya asisten AI Abyan. Ada yang bisa saya bantu?</p>
+        </div>
+      </div>
+      <div class="chatbot-footer">
+        <input type="text" id="chatbot-input" placeholder="Ketik pesan..." aria-label="Type your message" />
+        <button id="chatbot-send" aria-label="Send message">Kirim</button>
+      </div>
+    </div>
+  </body>
+</html>
