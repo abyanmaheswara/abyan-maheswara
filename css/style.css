@@ -192,6 +192,13 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
+.hero-btns .glass:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
 main {
   width: 100%;
   overflow: hidden; /* For AOS */

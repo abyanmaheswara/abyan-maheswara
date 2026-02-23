@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Abyan Maheswara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #1a73e8;
+        --text-color: #202124;
+        --secondary-text: #5f6368;
+        --border-color: #dadce0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-color);
+        line-height: 1.5;
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+      }
+
+      .cv-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 50px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
+
+      header {
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+      }
+
+      section {
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 5px;
+      }
+
+      .item {
+        margin-bottom: 15px;
+      }
+
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+      }
+
+      .item-sub {
+        color: var(--secondary-text);
+        font-style: italic;
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        font-size: 0.95rem;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+      }
+
+      .skill-tag {
+        background: #f1f3f4;
+        padding: 5px 12px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      @media print {
+        body {
+          background: none;
+          padding: 0;
+        }
+        .cv-container {
+          box-shadow: none;
+          padding: 0;
+          width: 100%;
+        }
+        .no-print {
+          display: none;
+        }
+      }
+
+      .no-print {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        background: var(--primary-color);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity 0.3s;
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="no-print">
+      <a href="index.html" class="btn" style="background: #5f6368">Back to Portfolio</a>
+      <button onclick="window.print()" class="btn">Print to PDF</button>
+    </div>
+
+    <div class="cv-container">
+      <header>
+        <h1>Abyan Maheswara</h1>
+        <div class="contact-info">
+          <span>📍 Jl. Sukajadi Lembang No.27A, Lembang, Bandung Barat</span>
+          <span>📞 089627733913</span>
+          <span>📧 abyan.maheswara@example.com</span>
+          <span>🔗 github.com/abyanmaheswara</span>
+        </div>
+      </header>
+
+      <section>
+        <h2>Pendidikan</h2>
+        <div class="item">
+          <div class="item-header">
+            <span>Politeknik Manufaktur Bandung</span>
+            <span>2024 - Sekarang</span>
+          </div>
+          <div class="item-sub">D4 Teknologi Rekayasa Informatika Industri</div>
+          <ul>
+            <li>Fokus pada sistem informasi industri, IoT, dan otomasi perangkat lunak.</li>
+            <li>Aktif dalam kegiatan akademik dan penelitian teknologi tepat guna.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-header">
+            <span>SMAN 1 Lembang</span>
+            <span>2021 - 2024</span>
+          </div>
+          <div class="item-sub">Lulusan Kurikulum Merdeka</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Pengalaman Proyek</h2>
+        <div class="item">
+          <div class="item-header">
+            <span>FactoryForge: Industrial IoT Monitoring</span>
+            <span>2025</span>
+          </div>
+          <div class="item-sub">Full-stack Developer & IoT Architect</div>
+          <ul>
+            <li>Membangun dashboard real-time menggunakan React, Node.js, dan Socket.io.</li>
+            <li>Implementasi visualisasi data sensor untuk efisiensi monitoring industri.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-header">
+            <span>Pakan Kucing Otomatis (IoT)</span>
+            <span>2024</span>
+          </div>
+          <div class="item-sub">IoT Developer</div>
+          <ul>
+            <li>Menggunakan ESP8266 dan platform Blynk untuk kontrol jarak jauh.</li>
+            <li>Berhasil menyelesaikan masalah pemberian pakan terjadwal secara mandiri.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-header">
+            <span>Robot Line Follower</span>
+            <span>2022</span>
+          </div>
+          <ul>
+            <li>Perancangan skematik PCB, etching, hingga pemrograman kontroler.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Keahlian Teknis</h2>
+        <div class="skills-grid">
+          <div class="skill-tag">Internet of Things (IoT)</div>
+          <div class="skill-tag">Web Development</div>
+          <div class="skill-tag">JavaScript / Node.js</div>
+          <div class="skill-tag">React.js</div>
+          <div class="skill-tag">Arduino / ESP8266</div>
+          <div class="skill-tag">C++ / Embedded Systems</div>
+          <div class="skill-tag">UI/UX Design</div>
+          <div class="skill-tag">Team Leadership</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Kepemimpinan & Organisasi</h2>
+        <div class="item">
+          <div class="item-header">
+            <span>Tim Robotika SMAN 1 Lembang</span>
+          </div>
+          <ul>
+            <li>Memimpin pengembangan teknis dan koordinasi tim dalam kompetisi regional.</li>
+            <li>Bertanggung jawab atas pelatihan dasar elektronika bagi anggota baru.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
