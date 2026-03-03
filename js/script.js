@@ -355,13 +355,17 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", newTheme);
   });
 
-  // AI Chatbot Functionality
+  // AI Chatbot Functionality Upgrade
   const chatbotIcon = document.getElementById("chatbot-icon");
   const chatbotWindow = document.getElementById("chatbot-window");
   const closeChatbot = document.getElementById("close-chatbot");
+  const clearChatBtn = document.getElementById("clear-chat");
   const chatbotBody = document.getElementById("chatbot-body");
   const chatbotInput = document.getElementById("chatbot-input");
   const chatbotSend = document.getElementById("chatbot-send");
+  const typingIndicator = document.getElementById("typing-indicator");
+
+  let isTyping = false;
 
   chatbotIcon.addEventListener("click", () => {
     chatbotWindow.classList.toggle("active");
@@ -371,53 +375,83 @@ document.addEventListener("DOMContentLoaded", () => {
     chatbotWindow.classList.remove("active");
   });
 
+  clearChatBtn.addEventListener("click", () => {
+    const messages = chatbotBody.querySelectorAll(".chat-message:not(.bot:first-child)");
+    messages.forEach((msg) => msg.remove());
+  });
+
   const chatbotResponses = {
-    halo: "Halo! Ada yang bisa saya bantu?",
-    "siapa kamu": "Saya adalah asisten AI Abyan. Saya bisa menjawab pertanyaan tentang Abyan, proyeknya, dan keahliannya.",
-    keahlian: "Abyan memiliki keahlian dalam HTML, CSS, JavaScript, Arduino, C++, ESP, dan Raspberry Pi. Dia sangat tertarik pada IoT, Robotika, dan Otomasi.",
-    skill: "Abyan memiliki keahlian dalam HTML, CSS, JavaScript, Arduino, C++, ESP, dan Raspberry Pi. Dia sangat tertarik pada IoT, Robotika, dan Otomasi.",
-    pendidikan: "Abyan saat ini menempuh pendidikan di Politeknik Manufaktur Bandung, jurusan Teknik Otomasi Manufaktur dan Mekatronika, program studi D4 Teknologi Rekayasa Informatika Industri.",
-    kuliah: "Abyan saat ini menempuh pendidikan di Politeknik Manufaktur Bandung, jurusan Teknik Otomasi Manufaktur dan Mekatronika, program studi D4 Teknologi Rekayasa Informatika Industri.",
-    proyek: "Abyan telah mengerjakan beberapa proyek menarik, seperti Robot Line Follower, Pakan Kucing Otomatis berbasis IoT, dan Tempat Sampah Otomatis. Anda bisa melihat detailnya di bagian Proyek.",
-    project: "Abyan telah mengerjakan beberapa proyek menarik, seperti Robot Line Follower, Pakan Kucing Otomatis berbasis IoT, dan Tempat Sampah Otomatis. Anda bisa melihat detailnya di bagian Proyek.",
-    kontak: "Anda bisa menghubungi Abyan melalui formulir kontak di bagian bawah halaman ini, atau melalui Instagram, LinkedIn, dan GitHub yang linknya ada di footer.",
-    contact: "Anda bisa menghubungi Abyan melalui formulir kontak di bagian bawah halaman ini, atau melalui Instagram, LinkedIn, dan GitHub yang linknya ada di footer.",
-    "terima kasih": "Sama-sama! Senang bisa membantu.",
-    default: "Maaf, saya belum mengerti pertanyaan itu. Coba tanyakan hal lain tentang Abyan.",
+    halo: "Halo! Saya asisten AI Abyan. Ada yang bisa saya bantu hari ini? Anda bisa tanya soal proyek IoT saya, pendidikan, atau pengalaman kerja.",
+    "siapa kamu": "Saya adalah asisten AI yang diprogram khusus untuk merepresentasikan Abyan Maheswara. Saya tahu banyak hal tentang hobi ngoprek robotika-nya!",
+    keahlian: "Abyan jago di beberapa bidang teknik: \n- **Software**: HTML, CSS, JavaScript, C++, Python.\n- **Hardware**: Arduino, ESP32/ESP8266, Raspberry Pi.\n- **Otomasi**: Sistem kontrol PLC, sensorika, dan mekatronika.",
+    pendidikan: "Abyan kuliah di **Politeknik Manufaktur Bandung (POLMAN)**, jurusan Teknik Otomasi Manufaktur dan Mekatronika. IPK-nya mantap dan dia aktif di kegiatan robotika!",
+    proyek:
+      "Ada beberapa proyek unggulan yang bisa saya jelaskan:\n1. **Robot Line Follower**: Robot dengan 14 sensor.\n2. **Pakan Kucing IoT**: Bisa kasih makan kucing dari HP.\n3. **FactoryForge**: Dashboard manajemen industri modern.\n4. **BanaSnap**: Deteksi pisang pakai AI.\nMau bahas yang mana?",
+    "line follower": "Robot Line Follower Abyan pakai 14 sensor lho! Pakai algoritma PID biar jalannya mulus banget pas ngetrack garis.",
+    "pakan kucing": "Proyek 'Pakan Kucing Otomatis' ini pakai ESP8266. Abang bisa kontrol jadwal makan kucing lewat aplikasi web dari mana saja.",
+    factoryforge: "FactoryForge itu proyek web industri yang serius. Pakai Next.js, TypeScript, dan Supabase buat database-nya. Ada sistem Tenant dan manajemen inventaris.",
+    banasnap: "BanaSnap itu aplikasi Flutter yang pakai Teachable Machine buat deteksi apakah pisang itu mentah, matang, atau busuk secara instan.",
+    "kurnia asih": "LMS PSAA Kurnia Asih itu sistem manajemen asrama yang Abyan bikin pakai CodeIgniter 4. Membantu banget buat digitalisasi data anak asuh.",
+    kontak: "Abang bisa hubungi Abyan lewat formulir di website ini, atau langsung ke LinkedIn-nya yang ada di footer. Dia suka diajak kolaborasi proyek IoT!",
+    "terima kasih": "Sama-sama! Senang bisa membantu Anda mengenal Abyan lebih jauh. Ada pesan lain?",
+    lokasi: "Abyan domisili di Bandung, tapi siap banget buat kerja remote atau on-site kalau ada tantangan seru.",
+    default: "Wah, saya belum belajar soal itu. Coba tanyakan hal lain seperti 'Apa itu FactoryForge?' atau 'Abyan kuliah di mana?'",
+  };
+
+  const addMessage = (text, sender) => {
+    const messageDiv = document.createElement("div");
+    messageDiv.className = `chat-message ${sender}`;
+    messageDiv.innerHTML = `<p>${text}</p>`;
+    chatbotBody.insertBefore(messageDiv, typingIndicator);
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  };
+
+  const showTyping = (show) => {
+    if (show) {
+      typingIndicator.classList.add("active");
+    } else {
+      typingIndicator.classList.remove("active");
+    }
+    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+  };
+
+  const getBotResponse = (input) => {
+    const userInput = input.toLowerCase();
+
+    // API Mode Simulation (If user types 'activate pro mode')
+    if (userInput.includes("activate pro mode")) {
+      return "⚠️ **PRO MODE DETECTED** ⚠️\nMode AI nyata (Gemini/GPT) bisa diaktifkan dengan menghubungkan API Key di backend. Untuk sekarang, saya tetap asisten simulasi yang paling keren!";
+    }
+
+    for (const key in chatbotResponses) {
+      if (userInput.includes(key)) {
+        return chatbotResponses[key];
+      }
+    }
+    return chatbotResponses.default;
   };
 
   const sendMessage = () => {
     const userInput = chatbotInput.value.trim();
-    if (userInput === "") return;
+    if (userInput === "" || isTyping) return;
 
-    // Display user message
-    const userMessageDiv = document.createElement("div");
-    userMessageDiv.className = "chat-message user";
-    userMessageDiv.innerHTML = `<p>${userInput}</p>`;
-    chatbotBody.appendChild(userMessageDiv);
-
-    // Get bot response
-    let botResponse = chatbotResponses.default;
-    for (const key in chatbotResponses) {
-      if (userInput.toLowerCase().includes(key)) {
-        botResponse = chatbotResponses[key];
-        break;
-      }
-    }
-
-    // Display bot message
-    setTimeout(() => {
-      const botMessageDiv = document.createElement("div");
-      botMessageDiv.className = "chat-message bot";
-      botMessageDiv.innerHTML = `<p>${botResponse}</p>`;
-      chatbotBody.appendChild(botMessageDiv);
-      // Scroll to the bottom
-      chatbotBody.scrollTop = chatbotBody.scrollHeight;
-    }, 500);
-
+    addMessage(userInput, "user");
     chatbotInput.value = "";
-    // Scroll to the bottom
-    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+    isTyping = true;
+
+    // Simulate Bot Thinking & Typing
+    setTimeout(() => {
+      showTyping(true);
+
+      const response = getBotResponse(userInput);
+      const typingTime = Math.min(Math.max(response.length * 20, 1000), 3000);
+
+      setTimeout(() => {
+        showTyping(false);
+        addMessage(response, "bot");
+        isTyping = false;
+      }, typingTime);
+    }, 500);
   };
 
   chatbotSend.addEventListener("click", sendMessage);
@@ -429,19 +463,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Back to Top Button Functionality
   const backToTopBtn = document.getElementById("back-to-top");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
-      backToTopBtn.classList.add("active");
-    } else {
-      backToTopBtn.classList.remove("active");
-    }
-  });
-
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+  if (backToTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        backToTopBtn.classList.add("active");
+      } else {
+        backToTopBtn.classList.remove("active");
+      }
     });
-  });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
 });
