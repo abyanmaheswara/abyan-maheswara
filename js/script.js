@@ -342,11 +342,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (savedTheme) {
     applyTheme(savedTheme);
-  } else if (prefersDark.matches) {
-    applyTheme("dark"); // Default to dark if system prefers dark
   } else {
-    applyTheme("dark"); // Default to dark if no preference (current theme)
+    // Initial application based on system preference if no saved theme
+    applyTheme(prefersDark.matches ? "dark" : "light");
   }
+
+  // Listen for system theme changes
+  prefersDark.addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+  });
 
   themeToggleBtn.addEventListener("click", () => {
     let currentTheme = body.classList.contains("light-theme") ? "light" : "dark";

@@ -77,6 +77,19 @@ body.light-theme {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  z-index: 10001; /* Above almost everything */
+  transition: width 0.1s ease-out;
 }
 
 body {
