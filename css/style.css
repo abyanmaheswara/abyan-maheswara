@@ -116,6 +116,10 @@ body {
   line-height: 1.6;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 #bg-canvas {
   position: fixed;
   top: 0;
@@ -434,35 +438,84 @@ footer {
   .nav-links {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    width: 60%;
-    background: var(--background-color);
+    background: var(--modal-overlay-bg);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    padding: 2rem 0;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    pointer-events: none;
+    z-index: 99;
   }
 
   .nav-links.active {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.active li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered delay for li items when active */
+  .nav-links.active li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .nav-links.active li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .nav-links.active li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .nav-links.active li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .nav-links.active li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  .nav-links.active li:nth-child(6) {
+    transition-delay: 0.6s;
+  }
+
+  .nav-links li a {
+    font-size: 2rem;
+    font-weight: 700;
   }
 
   .hamburger {
     display: block;
+    z-index: 101;
+    position: relative;
   }
 
   /* Hamburger Animation */
   .hamburger.toggle .line:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: var(--primary-color);
   }
   .hamburger.toggle .line:nth-child(2) {
     opacity: 0;
   }
   .hamburger.toggle .line:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
+    background-color: var(--primary-color);
   }
 
   .hero-title {

@@ -154,9 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".nav-links li");
 
   hamburger.addEventListener("click", () => {
-    // Animate Links
     navLinks.classList.toggle("active");
     hamburger.classList.toggle("toggle");
+    document.body.classList.toggle("no-scroll");
   });
 
   // Close menu when a link is clicked
@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
       hamburger.classList.remove("toggle");
+      document.body.classList.remove("no-scroll");
     });
   });
 
