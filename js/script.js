@@ -207,9 +207,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const blogModalContent = document.getElementById("blog-modal-content");
 
   blogCards.forEach((card) => {
-    const readMoreBtn = card.querySelector(".read-more");
-    readMoreBtn.addEventListener("click", (e) => {
-      e.preventDefault();
+    card.addEventListener("click", (e) => {
+      // If the user clicked a link, let preventDefault handle it
+      if (e.target.tagName === "A") e.preventDefault();
+
       const postId = card.getAttribute("data-post-id");
       const postContent = document.getElementById(`${postId}-content`);
 
