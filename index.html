@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Abyan Maheswara | IoT & Technology Enthusiast</title>
@@ -57,7 +68,7 @@
       <section id="about" aria-labelledby="about-heading">
         <h2 id="about-heading">Tentang Saya</h2>
         <div class="about-content">
-          <img src="abyan.jpg" alt="Foto Abyan" class="profile-pic" />
+          <img src="abyan.jpg" alt="Foto Abyan" class="profile-pic" loading="lazy" />
           <div class="about-text">
             <p>
               Halo! Saya Abyan, mahasiswa <b>Teknologi Rekayasa Informatika Industri</b> di <b>Politeknik Manufaktur Bandung</b> dengan fokus pada integrasi sistem cerdas dan <b>Internet of Things (IoT)</b>. Saya memiliki pengalaman
@@ -283,12 +294,12 @@
       <section id="gallery" aria-labelledby="gallery-heading">
         <h2 id="gallery-heading">Gallery</h2>
         <div class="gallery-grid">
-          <img src="abyan.jpg" alt="Abyan" />
-          <img src="abyan_himamo.jpg" alt="Abyan Himamo" />
-          <img src="abyan_jungle_1.jpg" alt="Abyan in the Jungle" />
-          <img src="abyan_jungle_2.jpg" alt="Abyan relaxing by the stream" />
-          <img src="abyan_almamater.jpg" alt="Abyan in Almamater" />
-          <img src="abyan_coffee.jpg" alt="Abyan enjoying coffee" />
+          <img src="abyan.jpg" alt="Abyan" loading="lazy" />
+          <img src="abyan_himamo.jpg" alt="Abyan Himamo" loading="lazy" />
+          <img src="abyan_jungle_1.jpg" alt="Abyan in the Jungle" loading="lazy" />
+          <img src="abyan_jungle_2.jpg" alt="Abyan relaxing by the stream" loading="lazy" />
+          <img src="abyan_almamater.jpg" alt="Abyan in Almamater" loading="lazy" />
+          <img src="abyan_coffee.jpg" alt="Abyan enjoying coffee" loading="lazy" />
         </div>
       </section>
 
@@ -297,7 +308,7 @@
         <div class="blog-grid">
           <!-- Blog Post Card -->
           <div class="blog-card" data-post-id="post1">
-            <img src="pakan_kucing_otomatis.jpg" alt="Blog Post Image" />
+            <img src="pakan_kucing_otomatis.jpg" alt="Blog Post Image" loading="lazy" />
             <div class="blog-card-content">
               <h3 class="blog-title">Membuat Pakan Kucing Otomatis dengan IoT</h3>
               <p class="blog-excerpt">Sebuah cerita singkat tentang bagaimana saya merancang dan membangun dispenser pakan kucing otomatis menggunakan ESP8266 dan Blynk...</p>
