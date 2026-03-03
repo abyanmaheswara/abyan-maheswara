@@ -354,10 +354,29 @@ form {
 form input,
 form textarea {
   padding: 1rem;
+  background-color: var(--card-bg-color);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   border: 1px solid var(--border-color);
-  border-radius: 5px;
+  border-radius: 10px;
   color: var(--text-color);
   font-family: "Poppins", sans-serif;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--subtitle-color);
+  opacity: 0.7;
 }
 
 form button {
