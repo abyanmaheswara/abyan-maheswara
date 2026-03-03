@@ -236,6 +236,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Gallery Modal Functionality
+  const galleryImages = document.querySelectorAll(".gallery-grid img");
+  const galleryModal = document.getElementById("gallery-modal");
+  const closeGalleryModal = galleryModal.querySelector(".close-modal");
+  const galleryModalImg = document.getElementById("gallery-modal-img");
+
+  galleryImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      galleryModalImg.src = img.src;
+      galleryModal.classList.add("active");
+    });
+  });
+
+  const hideGalleryModal = () => {
+    galleryModal.classList.remove("active");
+  };
+
+  closeGalleryModal.addEventListener("click", hideGalleryModal);
+  galleryModal.addEventListener("click", (e) => {
+    if (e.target === galleryModal) {
+      hideGalleryModal();
+    }
+  });
+
   // Skills Scroller
   const scrollers = document.querySelectorAll(".scroller");
 
