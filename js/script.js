@@ -423,4 +423,22 @@ document.addEventListener("DOMContentLoaded", () => {
       sendMessage();
     }
   });
+
+  // Back to Top Button Functionality
+  const backToTopBtn = document.getElementById("back-to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+      backToTopBtn.classList.add("active");
+    } else {
+      backToTopBtn.classList.remove("active");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });
