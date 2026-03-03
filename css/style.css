@@ -64,7 +64,12 @@ body.light-theme {
 #theme-toggle svg {
   width: 24px;
   height: 24px;
-  fill: currentColor; /* Ensures SVG color changes with text-color */
+  fill: currentColor;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
 }
 
 * {
@@ -414,18 +419,8 @@ footer {
   margin-top: 4rem;
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  width: 25px;
-  height: 3px;
-  background-color: var(--text-color);
-  margin: 5px 0;
-  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -436,87 +431,16 @@ footer {
     cursor: auto;
   }
   .nav-links {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--modal-overlay-bg);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    pointer-events: none;
-    z-index: 99;
+    display: none;
   }
-
-  .nav-links.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+  nav {
+    justify-content: space-between;
+    padding: 1rem 5%;
   }
-
-  .nav-links li {
-    margin: 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
+  .logo {
+    font-size: 1.5rem;
   }
-
-  .nav-links.active li {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Staggered delay for li items when active */
-  .nav-links.active li:nth-child(1) {
-    transition-delay: 0.1s;
-  }
-  .nav-links.active li:nth-child(2) {
-    transition-delay: 0.2s;
-  }
-  .nav-links.active li:nth-child(3) {
-    transition-delay: 0.3s;
-  }
-  .nav-links.active li:nth-child(4) {
-    transition-delay: 0.4s;
-  }
-  .nav-links.active li:nth-child(5) {
-    transition-delay: 0.5s;
-  }
-  .nav-links.active li:nth-child(6) {
-    transition-delay: 0.6s;
-  }
-
-  .nav-links li a {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  .hamburger {
-    display: block;
-    z-index: 101;
-    position: relative;
-  }
-
-  /* Hamburger Animation */
-  .hamburger.toggle .line:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: var(--primary-color);
-  }
-  .hamburger.toggle .line:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.toggle .line:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-    background-color: var(--primary-color);
-  }
+}
 
   .hero-title {
     font-size: 2.5rem;

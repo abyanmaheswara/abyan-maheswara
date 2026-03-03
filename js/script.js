@@ -153,20 +153,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelector(".nav-links");
   const links = document.querySelectorAll(".nav-links li");
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("toggle");
-    document.body.classList.toggle("no-scroll");
-  });
-
-  // Close menu when a link is clicked
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      hamburger.classList.remove("toggle");
-      document.body.classList.remove("no-scroll");
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("toggle");
+      document.body.classList.toggle("no-scroll");
     });
-  });
+
+    // Close menu when a link is clicked
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("toggle");
+        document.body.classList.remove("no-scroll");
+      });
+    });
+  }
 
   // Project Modal Functionality
   const projectCards = document.querySelectorAll(".project-card");
